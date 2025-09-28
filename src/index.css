@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -11,6 +15,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --site-color: #2a2c74;
 }
 
 body {
@@ -31,4 +37,42 @@ h1 {
     color: #213547;
     background-color: #ffffff;
   }
+}
+
+/* Game card css */
+.game-card {
+  color: var(--site-color);
+  margin: 2rem 0 0;
+}
+.game-box {
+  margin: 3rem 0;
+}
+
+/* Tile block css */
+.tile-wrapper {
+  perspective: 1000px;
+}
+
+.tile-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.tile-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.tile-front,
+.tile-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.tile-back {
+  transform: rotateY(180deg);
 }
