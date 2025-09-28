@@ -7,7 +7,7 @@ A fun memory game built with React, TypeScript, and Tailwind CSS. Players can en
 
 **Features**
 
-  1. Enter player name before starting the game.
+  1. Enter player name before starting the game. Maximum character limit for this field is set to 30 characters.
   2. Select board size: 2x2, 4x4, 4x5, or 6x6. By default 2x2 size is selected.
   3. Responsive game board.
   4. Timer displayed during the game.
