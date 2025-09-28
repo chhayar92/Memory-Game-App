@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { GameContext } from '../context/GameContext.jsx'
-import formattedTime from '../utils/format.js'
 
 export default function EndPage() {
   const { playerName, seconds, moves, resetGame } = useContext(GameContext)
@@ -29,7 +28,7 @@ export default function EndPage() {
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>
           <div className='rounded-xl bg-gray-50 p-4 shadow-inner'>
             <p className='text-sm text-gray-500'>Time</p>
-            <p className='text-xl font-semibold text-blue-600'>{formattedTime(seconds)} min</p>
+            <p className='text-xl font-semibold text-blue-600'>{seconds} s</p>
           </div>
           <div className='rounded-xl bg-gray-50 p-4 shadow-inner'>
             <p className='text-sm text-gray-500'>Moves</p>

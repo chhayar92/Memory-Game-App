@@ -37,6 +37,7 @@ export default function StartPage() {
             className='w-full rounded-lg border border-gray-300 bg-gray-50 px-4 py-2 text-gray-700 placeholder-gray-400 transition duration-200 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400'
             placeholder='Enter your name'
             value={nameInput}
+            maxLength={30}
             onChange={(e) => {
               if (error) setError('')
               setNameInput(e.target.value)
