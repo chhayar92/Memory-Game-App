@@ -35,7 +35,7 @@ export default function EndPage() {
             <p className='text-xl font-semibold text-blue-600'>{moves}</p>
           </div>
         </div>
-        
+
         {/* Play Again Button */}
         <button
           className='transform rounded-2xl bg-blue-500 px-8 py-3 font-semibold text-white shadow-lg transition duration-200 hover:-translate-y-1 hover:bg-blue-900'

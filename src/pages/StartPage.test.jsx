@@ -70,15 +70,15 @@ describe('StartPage Component', () => {
 
   // Test for character limit
   it('Should not allow input longer than max length', () => {
-    renderStartPage();
-    const input = screen.getByPlaceholderText(/enter your name/i);
+    renderStartPage()
+    const input = screen.getByPlaceholderText(/enter your name/i)
 
     // Try to enter 30 characters (assuming maxLength=30)
-    fireEvent.change(input, { target: { value: 'ABCDEFGHIJKLMNOPQRSTUVWXYZAXDD' } });
-    
+    fireEvent.change(input, { target: { value: 'ABCDEFGHIJKLMNOPQRSTUVWXYZAXDD' } })
+
     // The value should be trimmed to max 30 characters
-    expect(input.value.length).toBeLessThanOrEqual(30);
-  });
+    expect(input.value.length).toBeLessThanOrEqual(30)
+  })
 
   it('Start button becomes enabled after entering name', () => {
     renderStartPage()
